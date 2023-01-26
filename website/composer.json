@@ -1,8 +1,16 @@
 {
-    "name": "codeigniter4/appstarter",
+    "name": "nklein/keepintouch",
     "type": "project",
-    "description": "CodeIgniter4 starter app",
-    "homepage": "https://codeigniter.com",
+    "description": "Keep In Touch website",
+    "homepage": "--TBD--",
+    "authors": [
+      {
+        "name": "Patrick Stein",
+        "email": "pat@nklein.com",
+        "homepage": "https://nklein.com",
+        "role": "Developer",
+      },
+    ],
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
