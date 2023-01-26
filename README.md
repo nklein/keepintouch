@@ -12,7 +12,7 @@ This is a working name. A more useful name will be set up later.
 
 #### Setup in the `website` directory
 
-Fetch all of the application dependencies by going typing: `composer install`.
+Fetch all of the application dependencies by typing: `composer install`.
 
 Make sure the `.env` file has the correct database information in it
 and has the `CI_ENVIRONMENT` is set to `development`.

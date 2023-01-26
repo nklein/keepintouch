@@ -2,14 +2,14 @@
     "name": "nklein/keepintouch",
     "type": "project",
     "description": "Keep In Touch website",
-    "homepage": "--TBD--",
+    "homepage": "https://not-yet-known.com",
     "authors": [
       {
         "name": "Patrick Stein",
         "email": "pat@nklein.com",
         "homepage": "https://nklein.com",
-        "role": "Developer",
-      },
+        "role": "Developer"
+      }
     ],
     "license": "MIT",
     "minimum-stability": "dev",
@@ -41,8 +41,7 @@
         "test": "phpunit"
     },
     "support": {
-        "forum": "https://forum.codeigniter.com/",
-        "source": "https://github.com/codeigniter4/CodeIgniter4",
-        "slack": "https://codeigniterchat.slack.com"
+        "email": "pat@nklein.com",
+        "source": "https://github.com/nklein/keepintouch"
     }
 }
