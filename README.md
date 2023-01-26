@@ -8,6 +8,18 @@ This is a working name. A more useful name will be set up later.
 
 ## Development Details
 
+### Getting started on a new machine
+
+#### Setup in the `website` directory
+
+Fetch all of the application dependencies by going typing: `composer install`.
+
+Make sure the `.env` file has the correct database information in it
+and has the `CI_ENVIRONMENT` is set to `development`.
+
+Then do `php spark migrate --all` to get all of the CodeIgniter/Shield tables
+into the new database.
+
 ### Running mysql locally
 
 To run mysqld locally, just run `mysqld_safe`.

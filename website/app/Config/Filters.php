@@ -11,6 +11,14 @@ use CodeIgniter\Filters\SecureHeaders;
 
 class Filters extends BaseConfig
 {
+    const AUTH_EXCEPTIONS = [
+        '',
+        'auth/a/*',
+        'login*',
+        'register',
+        'welcome',
+    ];
+
     /**
      * Configures aliases for Filter classes to
      * make reading things nicer and simpler.
@@ -29,13 +37,14 @@ class Filters extends BaseConfig
      */
     public array $globals = [
         'before' => [
-            // 'honeypot',
-            // 'csrf',
-            // 'invalidchars',
+            'honeypot',
+            'csrf',
+            'invalidchars',
+            'session' => ['except' => self::AUTH_EXCEPTIONS,],
         ],
         'after' => [
             'toolbar',
-            // 'honeypot',
+            'honeypot',
             // 'secureheaders',
         ],
     ];
@@ -60,5 +69,9 @@ class Filters extends BaseConfig
      * Example:
      * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
      */
-    public array $filters = [];
+    public array $filters = [
+        'auth-rates' => [
+            ['before' => self::AUTH_EXCEPTIONS,],
+        ],
+    ];
 }
