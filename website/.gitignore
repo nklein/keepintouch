@@ -1,0 +1,6 @@
+.env
+.env.*
+vendor/**
+writable/debugbar/debugbar*
+writable/logs/log*
+writable/session/ci_session*
