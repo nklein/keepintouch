@@ -1,0 +1,47 @@
+{
+    "name": "nklein/keepintouch",
+    "type": "project",
+    "description": "Keep In Touch website",
+    "homepage": "https://not-yet-known.com",
+    "authors": [
+      {
+        "name": "Patrick Stein",
+        "email": "pat@nklein.com",
+        "homepage": "https://nklein.com",
+        "role": "Developer"
+      }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "codeigniter4/framework": "^4.0",
+        "codeigniter4/shield": "^1.0@beta"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9",
+        "mikey179/vfsstream": "^1.6",
+        "phpunit/phpunit": "^9.1"
+    },
+    "suggest": {
+        "ext-fileinfo": "Improves mime type detection for files"
+    },
+    "autoload": {
+        "exclude-from-classmap": [
+            "**/Database/Migrations/**"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Support\\": "tests/_support"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "support": {
+        "email": "pat@nklein.com",
+        "source": "https://github.com/nklein/keepintouch"
+    }
+}
