@@ -58,6 +58,7 @@ class AuthGroups extends ShieldAuthGroups
         'admin.access'               => 'Can access the site admin area',
         'admin.become-user'         => 'Can become user',
         'admin.lock-user'            => 'Can move a user from the user group to the locked group',
+        'admin.migrate'              => 'Can apply database migrations',
         'admin.unlock-user'          => 'Can move a user from the locked group back to the user group',
         'user.access'                => 'Can access the site user area',
         'user.edit-friends'         => 'Can add friends and modify permission of friends',
