@@ -1,36 +1,15 @@
 <?php
 
 use CodeIgniter\Shield\Entities\User;
-use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\DatabaseTestTrait;
 use Tests\Support\Database\Seeds\UserSeeder;
+use Tests\Support\Test\UnitTestCase;
 
 /**
  * @internal
  */
-final class AuthorizationTest extends CIUnitTestCase
+final class AuthorizationTest extends UnitTestCase
 {
-    use DatabaseTestTrait;
-
-    protected $migrateOnce = true;
-    protected $namespace = '';
-    protected $seed = UserSeeder::class;
-    protected $seedOnce = true;
-
-    private $users;
-
-    protected function setUp(): void {
-        parent::setUp();
-
-        $this->users = model('UserModel');
-    }
-
-    private function getUser($name): ?User {
-        return $this->users->findByCredentials([
-            'email' => $name . '@example.com',
-        ]);
-    }
-
     // Superadmin group checks
     public function testSuperadminCanManageAdmins()
     {
