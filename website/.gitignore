@@ -1,5 +1,7 @@
 .env
 .env.*
+.phpunit.result.cache
+build/logs/**
 vendor/**
 writable/debugbar/debugbar*
 writable/logs/log*

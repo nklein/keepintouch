@@ -6,7 +6,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        if (! auth()->can('user.access') ) {
+        if (! can('user.access') ) {
             return redirect()->to('/welcome');
         }
         return view('home_page', [ 'title' => 'Home Page' ]);

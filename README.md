@@ -10,7 +10,7 @@ This is a working name. A more useful name will be set up later.
 
 ### Getting started on a new machine
 
-#### Setup in the `website` directory
+#### Setup in the `website/` directory
 
 Fetch all of the application dependencies by typing: `composer install`.
 
@@ -29,3 +29,7 @@ The way mysql is installed on my laptop, this should be run as me rather than as
 
 To run a webserver locally that serves the application,
 begin in the `website/` directory and run: `php spark serve`.
+
+## Run unit tests
+
+In the `website/` directory, run `./vendor/bin/phpunit`.
