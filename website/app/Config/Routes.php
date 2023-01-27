@@ -32,6 +32,8 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/welcome', 'Welcome::index');
 
+$routes->get('/migrate', 'Migrate::index');
+
 service('auth')->routes($routes);
 
 /*

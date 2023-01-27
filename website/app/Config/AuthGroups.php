@@ -84,6 +84,7 @@ class AuthGroups extends ShieldAuthGroups
             'admin.access',
             'admin.lock-user',
             'admin.unlock-user',
+            'admin.migrate',
             'user.*',
         ],
         'user' => [
