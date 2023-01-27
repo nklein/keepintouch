@@ -42,7 +42,7 @@
     "scripts": {
         "css": "composer fonts; sass sass/site.scss public/site.css",
         "css-watch": "composer fonts; sass --watch sass/site.scss public/site.css",
-        "js": "cp vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min* public/; cp vendor/twbs/boot",
+        "js": "cp vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min* public/",
         "fonts": "cp -r vendor/twbs/bootstrap-icons/font/fonts public/",
         "test": "phpunit"
     },
