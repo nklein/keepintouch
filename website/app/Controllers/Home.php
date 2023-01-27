@@ -9,6 +9,6 @@ class Home extends BaseController
         if (! can('user.access') ) {
             return redirect()->to('/welcome');
         }
-        return view('home_page', [ 'title' => 'Home Page' ]);
+        return $this->renderPage('home_page', [ 'title' => lang('Home.title') ]);
     }
 }

@@ -25,6 +25,17 @@ into the new database.
 To run mysqld locally, just run `mysqld_safe`.
 The way mysql is installed on my laptop, this should be run as me rather than as root.
 
+### Compiling the CSS and Javascript
+
+First, install SASS. On the Mac, this can be `brew install sass/sass/sass`.
+
+Then, in the `website/` directory, run: `composer css` to install the CSS.
+If you're going to be constantly tweaking the CSS, then you might prefer to run:
+`composer css-watch` to have it rebuild any time the `sass/site.css` changes.
+
+To install the Javascript, go to the `website/` directory and
+run: `composer js`.
+
 ### Running a local webserver
 
 To run a webserver locally that serves the application,
