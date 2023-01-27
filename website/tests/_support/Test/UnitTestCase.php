@@ -27,6 +27,12 @@ class UnitTestCase extends CIUnitTestCase
         $this->users = model('UserModel');
     }
 
+    protected function tearDown(): void {
+        parent::tearDown();
+
+        auth()->logout();
+    }
+
     protected function getUser($name): ?User {
         return $this->users->findByCredentials([
             'email' => $name . '@example.com',

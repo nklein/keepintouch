@@ -1,11 +1,10 @@
 <?php
 
 use CodeIgniter\Shield\Test\AuthenticationTesting;
-use CodeIgniter\Shield\Authentication\Actions\Email2FA;
 use CodeIgniter\Test\ControllerTestTrait;
 use Tests\Support\Test\UnitTestCase;
 
-class HomeTest extends UnitTestCase
+class HomeControllerTest extends UnitTestCase
 {
     use AuthenticationTesting;
     use ControllerTestTrait;
@@ -21,8 +20,7 @@ class HomeTest extends UnitTestCase
 
     public function testUserCanAccessHome()
     {
-        $user = $this->getUser('user');
-        $result = $this->actingAs($user)
+        $result = $this->actingAs( $this->getUser('user') )
                        ->withURI('http://example.com/')
                        ->controller(\App\Controllers\Home::class)
                        ->execute('index');
