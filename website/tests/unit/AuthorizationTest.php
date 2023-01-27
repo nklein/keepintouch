@@ -41,6 +41,12 @@ final class AuthorizationTest extends UnitTestCase
         $this->assertTrue( $user->can('admin.unlock-user'), "Cannot admin.unlock-user" );
     }
 
+    public function testSuperadminCanMigrateDatabase()
+    {
+        $user = $this->getUser('superadmin');
+        $this->assertTrue( $user->can('admin.migrate'), "Cannot admin.migrate" );
+    }
+
     public function testSuperadminCanAccessUserPages()
     {
         $user = $this->getUser('superadmin');
@@ -112,6 +118,12 @@ final class AuthorizationTest extends UnitTestCase
     {
         $user = $this->getUser('admin');
         $this->assertTrue( $user->can('admin.unlock-user'), "Cannot admin.unlock-user" );
+    }
+
+    public function testAdminCanMigrateDatabase()
+    {
+        $user = $this->getUser('admin');
+        $this->assertTrue( $user->can('admin.migrate'), "Cannot admin.migrate" );
     }
 
     public function testAdminCanAccessUserPages()
@@ -187,6 +199,12 @@ final class AuthorizationTest extends UnitTestCase
         $this->assertFalse( $user->can('admin.unlock-user'), "Cannot admin.unlock-user" );
     }
 
+    public function testUserCannotMigrateDatabase()
+    {
+        $user = $this->getUser('user');
+        $this->assertFalse( $user->can('admin.migrate'), "Cannot admin.migrate" );
+    }
+
     public function testUserCanAccessUserPages()
     {
         $user = $this->getUser('user');
@@ -258,6 +276,12 @@ final class AuthorizationTest extends UnitTestCase
     {
         $user = $this->getUser('locked');
         $this->assertFalse( $user->can('admin.unlock-user'), "Cannot admin.unlock-user" );
+    }
+
+    public function testLockedCannotMigrateDatabase()
+    {
+        $user = $this->getUser('locked');
+        $this->assertFalse( $user->can('admin.migrate'), "Cannot admin.migrate" );
     }
 
     public function testLockedCanAccessUserPages()
