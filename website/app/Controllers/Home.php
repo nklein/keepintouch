@@ -6,6 +6,10 @@ class Home extends BaseController
 {
     public function index()
     {
+        // There is probably a better place for this, but
+        // it is effective at the moment.
+        \App\Controllers\Migrate::initialize();
+
         if (! can('user.access') ) {
             return redirect()->to('/welcome');
         }
