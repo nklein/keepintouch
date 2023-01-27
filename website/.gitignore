@@ -2,6 +2,11 @@
 .env.*
 .phpunit.result.cache
 build/logs/**
+public/bootstrap.bundle.min.js
+public/bootstrap.bundle.min.js.map
+public/site.css.map
+public/site.css
+public/site.css.map
 vendor/**
 writable/debugbar/debugbar*
 writable/logs/log*
