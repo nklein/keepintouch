@@ -44,3 +44,7 @@ begin in the `website/` directory and run: `php spark serve`.
 ## Run unit tests
 
 In the `website/` directory, run `./vendor/bin/phpunit`.
+
+## Configuration of email
+
+To use Fatcow, use port 587 with TLS.

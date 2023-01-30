@@ -1,3 +1,8 @@
+// variable overrides
+@import "color.scss";
+
 // include bootstrap from composer install location
 @import "../vendor/twbs/bootstrap/scss/bootstrap";
 @import "../vendor/twbs/bootstrap-icons/font/bootstrap-icons.scss";
+
+@import "layout.scss";

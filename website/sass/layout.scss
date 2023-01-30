@@ -1,0 +1,37 @@
+body {
+    margin-top: 0.5in;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+div.welcomepage {
+    header {
+        position: relative;
+        top: 0;
+
+        #logo {
+            float: left;
+            width: 30%;
+            margin-right: 5%;
+            margin-bottom: 5%;
+            max-width: 800px;
+        }
+
+        h1 {
+            padding-top: 0.5in;
+        }
+
+        a.btn {
+            position: absolute;
+            right: 10%;
+            top: 0;
+        }
+    }
+
+    section {
+        max-width: 500px;
+        margin-left: 35%;
+    }
+}

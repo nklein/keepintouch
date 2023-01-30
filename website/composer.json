@@ -44,7 +44,7 @@
         "css-watch": "composer fonts; sass --watch sass/site.scss public/site.css",
         "js": "cp vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min* public/",
         "fonts": "cp -r vendor/twbs/bootstrap-icons/font/fonts public/",
-        "test": "phpunit"
+        "test": "XDEBUG_MODE=coverage phpunit"
     },
     "support": {
         "email": "pat@nklein.com",
