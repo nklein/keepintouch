@@ -57,10 +57,4 @@ abstract class BaseController extends Controller
 
         // E.g.: $this->session = \Config\Services::session();
     }
-
-    protected function renderPage(string $view, ?array $data = null): string {
-        return view('header', $data)
-            . view($view, $data)
-            . view('footer', $data);
-    }
 }

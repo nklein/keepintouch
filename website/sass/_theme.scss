@@ -3,12 +3,14 @@ $themes: (
         bg: $blue-900,
         fg: $yellow-200,
         fg-h1: $pink-200,
+        bg-card: $gray-800,
     ),
 
     light: (
-        bg: #9ec5fe,
-        fg: #332701,
+        bg: $blue-100,
+        fg: $yellow-900,
         fg-h1: $pink-700,
+        bg-card: $gray-300,
     ),
 );
 
