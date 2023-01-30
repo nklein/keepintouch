@@ -36,7 +36,7 @@ class Migrate extends BaseController
         $migrate->setNamespace(null);
         $migrate->latest();
 
-        return $this->renderPage('simple_message', [
+        return view('simple_message', [
             'title' => lang('Migration.title'),
             'message' => lang('Migration.successful'),
         ]);
