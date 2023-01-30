@@ -1,8 +1,9 @@
-$body-light-bg: #99ccff;
-$body-light-color: #443300;
+@import "theme.scss";
 
-$body-dark-bg: #031633;
-$body-dark-color: #ffda6a;
-
-$body-bg: $body-light-bg;
-$body-color: $body-light-color;
+@include themify() {
+    background: themed('bg');
+    color: themed('fg');
+    h1 {
+        color: themed('fg-h1');
+    }
+}

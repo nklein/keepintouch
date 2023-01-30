@@ -8,7 +8,7 @@ ul {
 
 div.welcomepage {
     header {
-        position: relative;
+        not-position: relative;
         top: 0;
 
         #logo {
@@ -19,19 +19,22 @@ div.welcomepage {
             max-width: 800px;
         }
 
-        h1 {
-            padding-top: 0.5in;
-        }
-
-        a.btn {
+        .btn-toolbar, .btn-group {
             position: absolute;
             right: 10%;
             top: 0;
+
+            .btn {
+                padding-top: 5pt;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
         }
     }
 
     section {
         max-width: 500px;
         margin-left: 35%;
+        padding-left: 8pt;
     }
 }

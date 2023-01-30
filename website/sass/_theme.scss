@@ -1,0 +1,34 @@
+$themes: (
+    dark: (
+        bg: $blue-900,
+        fg: $yellow-200,
+        fg-h1: $pink-200,
+    ),
+
+    light: (
+        bg: #9ec5fe,
+        fg: #332701,
+        fg-h1: $pink-700,
+    ),
+);
+
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+
+    body.theme-#{$theme} {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+
+  }
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
